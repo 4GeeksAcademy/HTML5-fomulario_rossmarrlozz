@@ -13,168 +13,182 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div>
-            <h1>Payment form example</h1>
-        </div>
-
-        <div class="alert alert-danger" role="alert">
-            Some fields are missing
-        </div>
-
-        <div id="datosTDC" class="row">
-
-            <div class="col-4 inputbox mt-3 mr-2">
-                <p>Card #</p>
-                <input class="form-control mb-3" type="text" placeholder="XXXX XXXX XXXX XXXX" required>
-                <div class="valid-feedback"> All good</div>
-                <div class="invalid-feedback">Please enter a valid card number.</div>
+    <div class="container-fluid col-lg-12 col-md-8 col-sm-4">
+        <form class="row g-3 needs-validation justify-content-center border border-1" novalidate>
+            <div class="bg-light border border-1">
+                <h1>Payment form example</h1>
             </div>
 
-            <div class="col-4 inputbox mt-3 mr-2">
-                <p>CVC</p>
-                <input class="form-control mb-3" type="password" placeholder="000" required>
-                <div class="valid-feedback"> All good</div>
-                <div class="invalid-feedback">Please enter a valid CVC card number.</div>
-            </div>
+            <div class="border border-1 mt-0">
 
-            <div class="col-4 inputbox mt-3 mr-2">
-                <label for="card" class="form-label mb-3">Amount</label>
-                <div class="input-group">
-                    <p class="input-group-text">$</p>
-                    <input type="text" class="form-control mb-3"
-                        aria-label="Amount (to the nearest dollar) placeholder=" Amount" required>
-                    <div class="valid-feedback"> All good</div>
-                    <div class="invalid-feedback">Please enter a amount.</div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Información Usuario -->
-        <div class="row">
-            <div class="col mb-3">
-                <label for="card" class="form-label">Fisrt Name</label>
-                <input class="form-control" type="text" id="usuario" required>
-                <div class="valid-feedback"> All good</div>
-                <div class="invalid-feedback">Please enter your Name</div>
-            </div>
-
-            <div class="col mb-3">
-                <label for="card" class="form-label">Last Name</label>
-                <input class="form-control" type="text" id="usuario" required>
-                <div class="valid-feedback"> All good</div>
-                <div class="invalid-feedback">Please enter your Last Name</div>
-            </div>
-        </div>
-
-        <!-- Información Lugar de residencia -->
-        <div class="row">
-            <div class="col-6 mb-3">
-                <label for="direccion">City</label>
-                <input type="text" class="form-control" id="city" required>
-                <div class="valid-feedback"> All good</div>
-                <div class="invalid-feedback">Please enter your city</div>
-            </div>
-
-            <div class="col mb-3">
-                <label for="pais">State</label>
-                <div class="valid-feedback"> All good</div>
-                <div class="invalid-feedback">Please enter your city</div>
-
-                <select class="form-select" disabled">
-                    <option value="select">Pick State</option>
-                    <option value="A Coruña">A Coruña</option>
-                    <option value="Lugo">Lugo</option>
-                    <option value="Ourense">Ourense</option>
-                    <option value="Pontevedra">Pontevedra</option>
-                </select>
-            </div>
-
-            <div class="col mb-3">
-                <label for="codigo-postal">Postal Code</label>
-                <input class="form-control" type="text" id="codigo-postal">
-                <div class="valid-feedback"> All good</div>
-                <div class="invalid-feedback">Please enter your postal code </div>
-            </div>
-        </div>
-
-
-
-        <div class="row d-flex align-items-start">
-
-            <!-- Credit cards -->
-            <div class="col-6">
-                <p>We accept:</p>
-                <div class="btn btn-secondary d-flex justify-content-start ">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio1"><i
-                                class="fa-brands fa-cc-mastercard"></i></label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa"></i></label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio1"><i
-                                class="fa-brands fa-cc-diners-club"></i></label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio1"><i
-                                class="fa-brands fa-cc-stripe"></i></label>
+                <div class="row justify-content-center" style="padding-left: 1%; padding-right: 1%;">
+                    <div class="alert alert-danger" role="alert">
+                        Some fields are missing
                     </div>
                 </div>
-            </div>
 
-            <div class="col-6">
-                <p>Mesegge</p>
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                        style="height: 100px"></textarea>
-                    <label for="floatingTextarea2"></label>
-                    <div class="valid-feedback"> All good</div>
-                    <div class="invalid-feedback">Please your comment here/div>
+
+                <div class="row">
+
+                    <div class="col-4 inputbox mt-3 mr-2">
+                        <label for="card" class="form-label">Card #</label>
+                        <input class="form-control mb-3" type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+                        <div class="valid-feedback"> All good</div>
+                        <div class="invalid-feedback">Please enter a valid card number.</div>
                     </div>
-                    <p> Add any note here.</p>
+
+                    <div class="col-4 inputbox mt-3 mr-2">
+                        <label for="card" class="form-label">CVC #</label>
+                        <input class="form-control mb-3" type="password" placeholder="000" required>
+                        <div class="valid-feedback"> All good</div>
+                        <div class="invalid-feedback">Please enter a valid CVC card number.</div>
+                    </div>
+
+                    <div class="col-4 inputbox mt-3 mr-2">
+                        <label for="card" class="form-label">Amount</label>
+                        <div class="input-group">
+                            <p class="input-group-text">$</p>
+                            <input type="text" class="form-control mb-3"
+                                aria-label="Amount (to the nearest dollar) placeholder=" Amount" required>
+                            <div class="valid-feedback"> All good</div>
+                            <div class="invalid-feedback">Please enter a amount.</div>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-12 bg-body-tertiary d-flex justify-content-end">
-                    <hr class="mb-3 border">
-                    <input type="submit" value="Cancel" class="btn btn-secondary btn-lg btn-primary">
-                    <input type="submit" value="Send" class="btn btn-block btn-lg btn-primary">
+                <!-- Información Usuario -->
+                <div class="row">
+                    <div class="col mb-3">
+                        <label for="card" class="form-label">Fisrt Name</label>
+                        <input class="form-control" type="text" id="usuario" required>
+                        <div class="valid-feedback"> All good</div>
+                        <div class="invalid-feedback">Please enter your Name</div>
+                    </div>
+
+                    <div class="col mb-3">
+                        <label for="card" class="form-label">Last Name</label>
+                        <input class="form-control" type="text" id="usuario" required>
+                        <div class="valid-feedback"> All good</div>
+                        <div class="invalid-feedback">Please enter your Last Name</div>
+                    </div>
                 </div>
+
+                <!-- Información Lugar de residencia -->
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label for="direccion">City</label>
+                        <input type="text" class="form-control" id="city" required>
+                        <div class="valid-feedback"> All good</div>
+                        <div class="invalid-feedback">Please enter your city</div>
+                    </div>
+
+                    <div class="col mb-3">
+                        <label for="pais">State</label>
+                        <div class="valid-feedback"> All good</div>
+                        <div class="invalid-feedback">Please enter your city</div>
+
+                        <select class="form-select">
+                            <option value="select">Pick State</option>
+                            <option value="A Coruña">A Coruña</option>
+                            <option value="Lugo">Lugo</option>
+                            <option value="Ourense">Ourense</option>
+                            <option value="Pontevedra">Pontevedra</option>
+                        </select>
+                    </div>
+
+                    <div class="col mb-3">
+                        <label for="codigo-postal">Postal Code</label>
+                        <input class="form-control" type="text" id="codigo-postal" required>
+                        <div class="valid-feedback"> All good</div>
+                        <div class="invalid-feedback ">Please enter your postal code </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Credit cards -->
+                    <div class="col-6">
+                        <p>We accept:</p>
+                        <div class="btn btn-secondary d-flex justify-content-start ">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fa-brands fa-cc-mastercard"></i></label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fa-brands fa-cc-visa"></i></label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fa-brands fa-cc-diners-club"></i></label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1"><i
+                                        class="fa-brands fa-cc-stripe"></i></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <p>Mesegge</p>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                required style="height: 100px"></textarea>
+                            <label for="floatingTextarea2"></label>
+                            <div class="valid-feedback"> All good</div>
+                            <div class="invalid-feedback">Please your comment here
+                            </div>
+                            <p> Add any note here.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row border-top">
+                    <div class="col-12 bg-body-tertiary d-flex justify-content-end">
+                        <hr class="border">
+                        <input type="submit" value="Cancel" class="btn btn-secondary btn-lg btn-primary">
+                        <input type="submit" value="Send" class="btn btn-block btn-lg btn-primary"
+                            style="margin-left: 5px">
+                    </div>
+                </div>
+
+
             </div>
-
-
-        </div>
-
-
-
-
-
-
-
     </div>
+    </form>
 
+    <script>
+        // invalid fields
+        (() => {
+            'use strict'
 
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
 
-    </div>
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
 
-
-
-
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
