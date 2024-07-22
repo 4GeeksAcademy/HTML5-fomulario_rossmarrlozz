@@ -13,13 +13,13 @@
 </head>
 
 <body>
-    <div class="container-fluid col-lg-12 col-md-8 col-sm-4">
+    <div class="container-fluid">
         <form class="row g-3 needs-validation justify-content-center border border-1" novalidate>
             <div class="bg-light border border-1">
                 <h1>Payment form example</h1>
             </div>
 
-            <div class="border border-1 mt-0">
+            <div class="border border-1 mt-0 w-100 p-3">
 
                 <div class="row justify-content-center" style="padding-left: 1%; padding-right: 1%;">
                     <div class="alert alert-danger" role="alert">
@@ -28,23 +28,23 @@
                 </div>
 
 
-                <div class="row">
+                <div class="row g-3">
 
-                    <div class="col-4 inputbox mt-3 mr-2">
+                    <div class="col-md-4">
                         <label for="card" class="form-label">Card #</label>
                         <input class="form-control mb-3" type="text" placeholder="XXXX XXXX XXXX XXXX" required>
                         <div class="valid-feedback"> All good</div>
                         <div class="invalid-feedback">Please enter a valid card number.</div>
                     </div>
 
-                    <div class="col-4 inputbox mt-3 mr-2">
+                    <div class="col-md-4">
                         <label for="card" class="form-label">CVC #</label>
                         <input class="form-control mb-3" type="password" placeholder="000" required>
                         <div class="valid-feedback"> All good</div>
                         <div class="invalid-feedback">Please enter a valid CVC card number.</div>
                     </div>
 
-                    <div class="col-4 inputbox mt-3 mr-2">
+                    <div class="col-md-4">
                         <label for="card" class="form-label">Amount</label>
                         <div class="input-group">
                             <p class="input-group-text">$</p>
@@ -58,15 +58,15 @@
                 </div>
 
                 <!-- Información Usuario -->
-                <div class="row">
-                    <div class="col mb-3">
+                <div class="row g-3">
+                    <div class="col-md-6">
                         <label for="card" class="form-label">Fisrt Name</label>
                         <input class="form-control" type="text" id="usuario" required>
                         <div class="valid-feedback"> All good</div>
                         <div class="invalid-feedback">Please enter your Name</div>
                     </div>
 
-                    <div class="col mb-3">
+                    <div class="col-md-6">
                         <label for="card" class="form-label">Last Name</label>
                         <input class="form-control" type="text" id="usuario" required>
                         <div class="valid-feedback"> All good</div>
@@ -75,19 +75,16 @@
                 </div>
 
                 <!-- Información Lugar de residencia -->
-                <div class="row">
-                    <div class="col-6 mb-3">
+                <div class="row g-3">
+                    <div class="col-md-6">
                         <label for="direccion">City</label>
                         <input type="text" class="form-control" id="city" required>
                         <div class="valid-feedback"> All good</div>
                         <div class="invalid-feedback">Please enter your city</div>
                     </div>
 
-                    <div class="col mb-3">
+                    <div class="col-md-3">
                         <label for="pais">State</label>
-                        <div class="valid-feedback"> All good</div>
-                        <div class="invalid-feedback">Please enter your city</div>
-
                         <select class="form-select">
                             <option value="select">Pick State</option>
                             <option value="A Coruña">A Coruña</option>
@@ -95,9 +92,11 @@
                             <option value="Ourense">Ourense</option>
                             <option value="Pontevedra">Pontevedra</option>
                         </select>
+                        <div class="valid-feedback"> All good</div>
+                        <div class="invalid-feedback">Please enter your state</div>
                     </div>
 
-                    <div class="col mb-3">
+                    <div class="col-md-3">
                         <label for="codigo-postal">Postal Code</label>
                         <input class="form-control" type="text" id="codigo-postal" required>
                         <div class="valid-feedback"> All good</div>
@@ -105,9 +104,9 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row g-3">
                     <!-- Credit cards -->
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <p>We accept:</p>
                         <div class="btn btn-secondary d-flex justify-content-start ">
                             <div class="form-check form-check-inline">
@@ -140,7 +139,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <p>Mesegge</p>
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
